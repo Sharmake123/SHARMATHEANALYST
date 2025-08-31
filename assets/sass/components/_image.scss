@@ -13,6 +13,8 @@
 
 		img {
 			display: block;
+			max-width: 100%;
+			height: auto;
 		}
 
 		&.left,
@@ -58,5 +60,22 @@
 			@include breakpoint('<=small') {
 				margin: (_size(element-margin) * 0.75) 0;
 			}
+		}
+
+		// Responsive image width adjustments
+		@include breakpoint('<=large') {
+			max-width: 80%;
+		}
+
+		@include breakpoint('<=medium') {
+			max-width: 60%;
+		}
+
+		@include breakpoint('<=small') {
+			max-width: 40%;
+		}
+
+		@include breakpoint('<=xsmall') {
+			max-width: 30%;
 		}
 	}
